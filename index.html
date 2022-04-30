@@ -71,6 +71,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-TFM" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/01/27/TFM/" class="article-date">
+  <time class="dt-published" datetime="2021-01-27T01:44:27.000Z" itemprop="datePublished">2021-01-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/01/27/TFM/">TFM</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第三章：欧拉固相模型-MFIX-TFM"><a href="#第三章：欧拉固相模型-MFIX-TFM" class="headerlink" title="第三章：欧拉固相模型 (MFIX-TFM)"></a>第三章：欧拉固相模型 (MFIX-TFM)</h1><p>MFIX-TFM(two-fluid model),也称作气固连续体模型、欧拉-欧拉模型、或者多流体模型，描述了由一个连续相和一个或者多个离散相组成的混合物的运动状态。其中，连续相在章节二中已经详细叙述，在本章中以<em>gas phase</em>代替，当然也可以代表其他流体。把气体相识别为<em>continuous phase</em>是因为它的体积分数必须始终大于0。而分散相在本章中通常称为<em>solid phase</em>，但可能是液滴或气泡。分散相的元素（这里指<em>particles</em>）被分配到总计<em>M</em>个不同的分散相中,用以描述其大小，密度和化学物质组成。与前述的连续相相同，将每个分散相都作为连续体考虑，但不同的是空隙率可能为0，一个典型例子是在求解域的某个部分不存在分散相（例如密相床的freeboard段），而连续相在整个区域内存在。下面的方程以守恒形式给出，而MFIX中的求解是非守恒形式（减去对应相的连续性方程）。</p>
+<h2 id="3-1-概述"><a href="#3-1-概述" class="headerlink" title="3.1 概述"></a>3.1 概述</h2><p>许多工作用于推导多相流的动量方程。其中两个主要的分类包括mixture(drift-flux)方法，它将整个混合物当作整体；以及multiphase averaging approach多相平均方法，本节重点关注后者。欧拉多相模型可以模拟被成为相的多个分散且相互作用的物料。欧拉方法中，每个<em>phase</em>都被描述为占据相同空间区域的连续体。<br>通过一种平均过程（对于可以描述任意相在任意点精确运动的一系列方程进行平均），将平均后的方程与微观（精确）方程相关联。ensemble平均和volume平均是两种广为人知的平均手段。通常来讲，ensemble 平均针对空间中一组整体宏观等效系统中的所有点进行平均；而volume平均则是对相对于所关注的宏观尺度范围较小的区域进行局部空间平均。更详细的内容参见第二章 <strong>39</strong>。无论如何，前述的平均方法都会导致方程中存在某些形式无法确定的项；也就是说仍存在封闭问题。利用定义清晰的项来表达上述可以反应微观尺度上运动行为是一项艰巨的任务。这里所说的定义清晰(well defined)指的是如同控制方程中那样，但是是以平均量（例如，局部平均的速度或者相分数）的形式来描述的未知项之间具有着封闭关系。<br>建立相应的本构关系至今仍是艰巨的任务，特别是在本构关系(方程)应该采取什么样的形式以及可能用到哪些假设上都不太明确。相间界面的存在以及与之相关的不连续性对于实验和模拟来说都极具挑战性。因此，界面相的本构关系通常被认为是多流体模型建立过程中最薄弱的一环。而前一种所说的整体平均(ensemble average)方法对整个体系也是当作相互渗透且连续的流体，区别是其方程的建立更多的基于主观上的想法（直觉），同时受到连续介质力学一般原理的约束。虽然这种方法可能得到相同的本构关系，但并不会揭示从微观角度演化得到宏观上本构关系的合理过程。<br>下面的小节概括了组成MFIX-TFM中离散相模型的方程，若非单独说明，连续相的模型与第二章的内容相同。</p>
+<h2 id="3-2-局限性"><a href="#3-2-局限性" class="headerlink" title="3.2 局限性"></a>3.2 局限性</h2><p>MFIX-TFM的局限性包括: </p>
+<ul>
+<li>连续相(流体相)相分数\varepsilon_g恒大于0，导致分散相(固相)相分数$\varepsilon$之和不为1。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/27/TFM/" data-id="ckkero4ex00005ivfeod02pig" data-title="TFM" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/01/11/test/" class="article-date">
@@ -268,6 +312,10 @@
       <ul>
         
           <li>
+            <a href="/2021/01/27/TFM/">TFM</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/11/test/">test</a>
           </li>
         
@@ -296,7 +344,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       
-      &copy; 2021 John Doe<br>
+      &copy; 2022 John Doe<br>
       Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
